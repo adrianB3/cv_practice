@@ -11,3 +11,5 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
 plt.imshow(gray_image, cmap='gray')
 plt.show()
+cv2.imshow("Hello", gray_image)
+cv2.waitKey(0)
