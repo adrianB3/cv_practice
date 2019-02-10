@@ -47,7 +47,7 @@ def estimate_label(rgb_image):
     threshold = 99
     if avg >= threshold:
         predicted_label = 1
-    # TODO - find another features for day/night classification
+    # TODO - find other features for day/night classification
     return predicted_label
 
 
@@ -61,7 +61,8 @@ def get_misclassified_images(test_images):
         predicted_label = estimate_label(im)
 
         if(predicted_label != true_label):
-            misclassified_images_labels.append((im, predicted_label, true_label))
+            misclassified_images_labels.append(
+                (im, predicted_label, true_label))
 
     return misclassified_images_labels
 
@@ -117,4 +118,5 @@ num_correct = total - len(MISCLASSIFIED)
 accuracy = num_correct/total
 
 print("Accuracy: ", accuracy)
-print("Number of misclassified images: " + str(len(MISCLASSIFIED)) + " out of " + str(total))
+print("Number of misclassified images: " +
+      str(len(MISCLASSIFIED)) + " out of " + str(total))
