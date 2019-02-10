@@ -44,4 +44,17 @@ ax3.set_title('original image')
 ax3.imshow(image_solid)
 ax4.set_title('frequency transform image')
 ax4.imshow(f_solid, cmap='gray')
+
+img = cv2.imread('images/birds.jpg')
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+norm_img = gray/255.0
+
+f_img = ft_image(norm_img)
+
+f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 20))
+
+ax1.imshow(img)
+ax2.imshow(f_img, cmap='gray')
 plt.show()
