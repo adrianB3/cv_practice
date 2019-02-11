@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9365c7e7-a838-4f5b-a058-3d338d902600" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/convolution_filters_edge_det/hough_lines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/convolution_filters_edge_det/haar_cascades_face_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features_image_segmentation/harris_corner_detection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,13 +41,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convolution_filters_edge_det/hough_lines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state relative-caret-position="450">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convolution_filters_edge_det/haar_cascades_face_detection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features_image_segmentation/harris_corner_detection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,10 +101,12 @@
         <option value="$PROJECT_DIR$/convolution_filters_edge_det/fourier_transform.py" />
         <option value="$PROJECT_DIR$/convolution_filters_edge_det/sobel_edge_detect.py" />
         <option value="$PROJECT_DIR$/convolution_filters_edge_det/hough_lines.py" />
+        <option value="$PROJECT_DIR$/convolution_filters_edge_det/haar_cascades_face_detection.py" />
+        <option value="$PROJECT_DIR$/features_image_segmentation/harris_corner_detection.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="25" />
     <option name="width" value="1400" />
@@ -99,11 +126,6 @@
             <path>
               <item name="cv_practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="cv_practice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cv_practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cv_practice" type="462c0819:PsiDirectoryNode" />
-              <item name="convolution_filters_edge_det" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -145,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hough_lines">
+  <component name="RunManager" selected="Python.harris_corner_detection">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="cv_practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,28 +182,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="day_night_classifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="cv_practice" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/image_basics" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image_basics/day_night_classifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -212,20 +212,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="helpers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="haar_cascades_face_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cv_practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/image_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/convolution_filters_edge_det" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image_basics/helpers.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/convolution_filters_edge_det/haar_cascades_face_detection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="harris_corner_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cv_practice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/features_image_segmentation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/features_image_segmentation/harris_corner_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,11 +293,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.harris_corner_detection" />
+        <item itemvalue="Python.haar_cascades_face_detection" />
         <item itemvalue="Python.hough_lines" />
         <item itemvalue="Python.sobel_edge_detect" />
         <item itemvalue="Python.fourier_transform" />
-        <item itemvalue="Python.day_night_classifier" />
-        <item itemvalue="Python.helpers" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +315,7 @@
       <workItem from="1549818984554" duration="2662000" />
       <workItem from="1549821881841" duration="7248000" />
       <workItem from="1549898003371" duration="298000" />
-      <workItem from="1549898326168" duration="640000" />
+      <workItem from="1549898326168" duration="3907000" />
     </task>
     <task id="LOCAL-00001" summary="added fourier transform">
       <created>1549824433565</created>
@@ -308,20 +324,27 @@
       <option name="project" value="LOCAL" />
       <updated>1549824433565</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added hough lines">
+      <created>1549899088058</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549899088058</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12161000" />
+    <option name="totallyTimeSpent" value="15428000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6218236" visible="true" weight="0.21162046" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62153846" visible="true" weight="0.21162046" />
       <window_info id="Structure" order="1" sideWeight="0.50159746" side_tool="true" weight="0.120469086" />
       <window_info id="Favorites" order="2" sideWeight="0.50159746" side_tool="true" weight="0.120469086" />
-      <window_info x="190" y="235" width="434" height="866" id="Documentation" order="3" sideWeight="0.3781764" side_tool="true" visible="true" weight="0.21162046" />
+      <window_info x="190" y="235" width="434" height="866" id="Documentation" order="3" sideWeight="0.37846154" side_tool="true" visible="true" weight="0.21162046" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -334,7 +357,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3812038" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.327818" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49946696" visible="true" weight="0.32696176" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49946696" visible="true" weight="0.29270947" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -348,7 +371,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added fourier transform" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fourier transform" />
+    <MESSAGE value="added hough lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="added hough lines" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/image_basics/__init__.py">
@@ -390,10 +414,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/convolution_filters_edge_det/hough_lines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="450">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convolution_filters_edge_det/haar_cascades_face_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_image_segmentation/harris_corner_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
