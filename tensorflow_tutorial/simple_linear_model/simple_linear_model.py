@@ -9,7 +9,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 data = input_data.read_data_sets('data\\MNIST\\')
 
 print("Size of: ")
-print(" - Training-set:\t\t{}".format(data.train)
+print(" - Training-set:\t\t{}".format(data.train))
 print(" - Validation-set:\t{}".format(data.num_val))
 print(" - Test-set:\t\t{}".format(data.num_test))
 
